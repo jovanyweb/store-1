@@ -1,0 +1,14 @@
+<article [className]="isHome?'home':''">
+    <img [ngSrc]=" product.image" [alt]="product.title" height="144" width="256" />
+    <div class="info">
+        <h3>{{product.title}}</h3>
+        <p class="description">{{product.description}}</p>
+        <p class="price"><span class="label">Price:</span> {{product.price|currency:"USD"}}</p>
+        <p class="category"><span class="label">Category:</span> {{product.category}}</p>
+        @if(isHome){
+        <a class="btn-primary btn" [routerLink]="`/${product.id}`">View more</a>
+        }
+        <button class="btn btn-primary" [routerLink]="`/edit/${product.id}`">Update</button>
+        <button class="btn btn-delete" (click)="deleteClick($event,product.id)">Delete</button>
+    </div>
+</article>

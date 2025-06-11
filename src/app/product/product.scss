@@ -1,0 +1,63 @@
+article {
+    &:not(.home) {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(50%, 1fr));
+        margin: 10px;
+    }
+
+    img {
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .btn {
+
+        border-radius: 10px;
+        padding: 10px;
+        text-decoration: none;
+        border: none;
+        font-size: 13px;
+        margin-right: 10px;
+    }
+
+    .btn-delete {
+
+        background-color: #f00;
+        color: #fff;
+    }
+
+    .btn-primary {
+        background-color: #008cff;
+        color: #fff;
+    }
+
+    &.home {
+
+
+        p.description {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        p.category {
+
+            margin-bottom: 10px;
+        }
+    }
+
+    .info {
+
+        p {
+            &.description {
+                color: #999;
+                margin-bottom: 10px;
+
+            }
+
+            span {
+                font-weight: bold;
+            }
+        }
+    }
+}

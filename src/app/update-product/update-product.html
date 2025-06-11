@@ -1,0 +1,15 @@
+<h2>Update Product</h2>
+<h3>{{message}}</h3>
+<form method="post" (submit)="onSubmit($event)">
+    <label for="name" (keydown.enter)="focusNextInput($event,priceInput)">Name: <input [(ngModel)]="name" type="text"
+            name="name" id="name"></label>
+    <label for="price">Price: <input #priceInput (keydown.enter)="focusNextInput($event,descriptionInput)"
+            [(ngModel)]="price" type="number" name="price" id="price"></label>
+    <label for="description">Description: <textarea (keydown.enter)="focusNextInput($event,categoryInput)"
+            #descriptionInput [(ngModel)]="description" name="description" id="description"></textarea></label>
+    <label for="category">Category: <input type="text" (keydown.enter)="focusNextInput($event,imageInput)"
+            #categoryInput [(ngModel)]="category" name="category" id="category"></label>
+    <label for="image">Image: <input type="file" accept="image/*" #imageInput [(ngModel)]="image" name="image"
+            id="image"></label>
+    <button type="submit">Update</button>
+</form>

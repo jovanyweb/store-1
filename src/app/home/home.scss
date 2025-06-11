@@ -1,0 +1,17 @@
+@use "sass:math" as math;
+
+.products-section {
+    margin: 10px;
+
+    h2 {
+        text-align: center;
+        margin-block: 10px;
+    }
+
+    .products {
+
+        display: grid;
+        gap: 20px 5px;
+        grid-template-columns: repeat(3, minmax(math.div(100%, 3), 1fr));
+    }
+}

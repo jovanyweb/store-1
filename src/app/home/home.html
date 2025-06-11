@@ -1,0 +1,11 @@
+<section class="products-section">
+    <h2>Products</h2>
+    <div class="products">
+
+        @if (products.hasValue()) {
+        @for(product of products.value();track product.id){
+        <app-product [product]="product" [isHome]="true"></app-product>
+        }
+        }
+    </div>
+</section>

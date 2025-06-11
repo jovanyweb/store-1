@@ -1,0 +1,36 @@
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    gap: 10px;
+
+    label {
+        display: flex;
+
+        align-items: center;
+        justify-content: space-between;
+
+        input:not([type="file"]),
+        textarea {
+            padding: 5px 10px;
+            border: 1px solid black;
+            outline: none;
+            border-radius: 5px;
+        }
+    }
+
+    button {
+        background-color: #008cff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+
+        padding: 10px;
+    }
+}
+
+h2,
+h3 {
+    text-align: center;
+    margin-block: 10px;
+}
