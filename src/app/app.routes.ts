@@ -27,11 +27,13 @@ export const routes: Routes = [
                 component: UpdateProduct,
                 path: "edit/:id",
                 title: "Jovany George - Update Product"
+                renderMode:RenderMode.Server
             },
             {
                 component: ProductPage,
                 path: ":id",
-                title: "Jovany George - Products"
+                title: "Jovany George - Products",
+                renderMode: RenderMode.Server
             }
         ]
     }
